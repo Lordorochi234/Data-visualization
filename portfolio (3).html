@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .project-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            color: #764ba2;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .project-description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .insights {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .insights h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        .insights ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .insights li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .methodology {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .methodology h3 {
+            color: #1976D2;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mark Antony</h1>
+            <p><i>markxantony@gmail.com</i></p>
+            <p><i>+254 112839892</i></p>
+            <p class="subtitle">Front-End Developer & Data visualization</p>
+        </header>
+
+        <div class="project-section">
+            <h2 class="project-title">R Project: Motor Vehicle Insurance Claims Analysis - Kenya</h2>
+            
+            <div class="project-description">
+                <h3>Project Overview</h3>
+                <p><strong>Data Source:</strong> Simulated data based on Kenya Insurance Regulatory Authority (IRA) market patterns</p>
+                <p><strong>Analysis Period:</strong> 2023 Financial Year</p>
+                <p><strong>Objective:</strong> Analyze the distribution of motor vehicle insurance claims across different insurance classes, claim types, and regional patterns in Kenya.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">12,450</div>
+                    <div class="stat-label">Total Claims</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">KES 2.8B</div>
+                    <div class="stat-label">Total Claims Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">KES 224K</div>
+                    <div class="stat-label">Average Claim Amount</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">68%</div>
+                    <div class="stat-label">Claims Settlement Rate</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; color: #764ba2;">Claims Distribution by Type</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Claim Type</th>
+                        <th>Number of Claims</th>
+                        <th>Total Value (KES)</th>
+                        <th>Average Claim (KES)</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Accident - Own Damage</strong></td>
+                        <td>4,280</td>
+                        <td>1,156,000,000</td>
+                        <td>270,093</td>
+                        <td>34.4%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accident - Third Party</strong></td>
+                        <td>3,650</td>
+                        <td>730,000,000</td>
+                        <td>200,000</td>
+                        <td>29.3%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Theft</strong></td>
+                        <td>1,890</td>
+                        <td>567,000,000</td>
+                        <td>300,000</td>
+                        <td>15.2%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fire Damage</strong></td>
+                        <td>980</td>
+                        <td>196,000,000</td>
+                        <td>200,000</td>
+                        <td>7.9%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vandalism</strong></td>
+                        <td>850</td>
+                        <td>85,000,000</td>
+                        <td>100,000</td>
+                        <td>6.8%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weather Related</strong></td>
+                        <td>800</td>
+                        <td>66,400,000</td>
+                        <td>83,000</td>
+                        <td>6.4%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #f8f9fa; font-weight: bold;">
+                        <td>TOTAL</td>
+                        <td>12,450</td>
+                        <td>2,800,400,000</td>
+                        <td>224,926</td>
+                        <td>100%</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3 style="margin-top: 40px; color: #764ba2;">Regional Distribution</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Number of Claims</th>
+                        <th>Total Value (KES)</th>
+                        <th>Market Share</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nairobi</strong></td>
+                        <td>5,480</td>
+                        <td>1,316,000,000</td>
+                        <td>44.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mombasa</strong></td>
+                        <td>1,870</td>
+                        <td>430,400,000</td>
+                        <td>15.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kisumu</strong></td>
+                        <td>1,245</td>
+                        <td>280,040,000</td>
+                        <td>10.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nakuru</strong></td>
+                        <td>1,120</td>
+                        <td>252,036,000</td>
+                        <td>9.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Eldoret</strong></td>
+                        <td>935</td>
+                        <td>196,028,000</td>
+                        <td>7.5%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other Regions</strong></td>
+                        <td>1,800</td>
+                        <td>325,896,000</td>
+                        <td>14.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px; color: #764ba2;">Claims by Insurance Class</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Insurance Class</th>
+                        <th>Number of Policies</th>
+                        <th>Claims Reported</th>
+                        <th>Claims Ratio</th>
+                        <th>Total Payouts (KES)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Comprehensive</strong></td>
+                        <td>45,200</td>
+                        <td>7,470</td>
+                        <td>16.5%</td>
+                        <td>1,960,280,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Third Party Fire & Theft</strong></td>
+                        <td>62,800</td>
+                        <td>3,140</td>
+                        <td>5.0%</td>
+                        <td>628,080,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Third Party Only</strong></td>
+                        <td>128,500</td>
+                        <td>1,840</td>
+                        <td>1.4%</td>
+                        <td>212,040,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="chart-container">
+                <h3 style="color: #764ba2; margin-bottom: 20px;">Visual Analysis</h3>
+                <canvas id="claimsChart"></canvas>
+            </div>
+
+            <div class="insights">
+                <h3>Key Insights</h3>
+                <ul>
+                    <li><strong>Accident claims dominate:</strong> Own damage and third-party accidents account for 63.7% of all claims, highlighting road safety as a critical concern.</li>
+                    <li><strong>Nairobi concentration:</strong> 44% of claims originate from Nairobi, reflecting higher vehicle density and traffic congestion.</li>
+                    <li><strong>Theft remains significant:</strong> Vehicle theft claims average KES 300,000, the highest average among claim types.</li>
+                    <li><strong>Comprehensive policies at higher risk:</strong> 16.5% claims ratio vs. 1.4% for third-party only, justifying premium differences.</li>
+                    <li><strong>Seasonal patterns:</strong> Weather-related claims (6.4%) spike during rainy seasons (April-May, October-November).</li>
+                </ul>
+            </div>
+
+            <div class="methodology">
+                <h3>R Analysis Methodology</h3>
+                <p><strong>Tools Used:</strong> R (version 4.3), tidyverse, ggplot2, dplyr</p>
+                <p><strong>Data Processing:</strong> Claims data cleaned and categorized by type, region, and insurance class. Outliers removed using IQR method.</p>
+                <p><strong>Statistical Methods:</strong> Descriptive statistics, frequency distributions, and percentage calculations.</p>
+                <p><strong>Visualization:</strong> Created using ggplot2 for R analysis, Chart.js for web presentation.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Sarah Kimani | Front-End Developer Portfolio | Built with HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Claims Distribution Chart
+        const ctx = document.getElementById('claimsChart').getContext('2d');
+        const claimsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Own Damage', 'Third Party', 'Theft', 'Fire', 'Vandalism', 'Weather'],
+                datasets: [{
+                    label: 'Number of Claims',
+                    data: [4280, 3650, 1890, 980, 850, 800],
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(118, 75, 162, 0.8)',
+                        'rgba(237, 100, 166, 0.8)',
+                        'rgba(255, 159, 64, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(102, 126, 234, 1)',
+                        'rgba(118, 75, 162, 1)',
+                        'rgba(237, 100, 166, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Motor Vehicle Insurance Claims Distribution by Type',
+                        font: {
+                            size: 18
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Claims'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Claim Type'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
